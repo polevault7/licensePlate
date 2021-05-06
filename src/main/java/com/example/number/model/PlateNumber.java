@@ -1,0 +1,18 @@
+package com.example.number.model;
+
+import lombok.Data;
+import lombok.Value;
+
+@Value
+public class PlateNumber {
+    long id;
+    Character firstLetter;
+    String number;
+    Character secondLetter;
+    Character thirdLetter;
+
+    @Override
+    public String toString() {
+        return "" + firstLetter + number + secondLetter + thirdLetter;
+    }
+}
