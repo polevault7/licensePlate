@@ -21,7 +21,7 @@ public class PlateNumberRepository {
     private final PlateRowMapper rowMapper = new PlateRowMapper(new PlateNumberConverter());
 
     public List<PlateNumber> getAll() {
-        return template.query("select id, plateNumber  from numbers order by id limit 5",
+        return template.query("select id, plateNumber  from numbers order by id limit 3",
                 rowMapper
         );
     }

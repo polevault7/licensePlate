@@ -1,12 +1,10 @@
 package com.example.number.controller;
 
 
-
 import com.example.number.model.PlateNumber;
 import com.example.number.repository.PlateNumberRepository;
 import com.example.number.service.PlateNumberService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

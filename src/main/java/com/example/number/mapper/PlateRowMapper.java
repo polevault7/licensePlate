@@ -15,16 +15,8 @@ public class PlateRowMapper implements RowMapper<PlateNumber> {
 
     @Override
     public PlateNumber mapRow(ResultSet rs, int rowNum) throws SQLException {
-//        return new PlateNumber(
         return converter.fromString(
                 rs.getLong("id"),
                 rs.getString("plateNumber"));
-
-//                new (
-//                        rs.getString("firstLetter").charAt(0),
-//                        rs.getInt("number"),
-//                        rs.getString("secondLetter").charAt(0),
-//                        rs.getString("thirdLetter").charAt(0)
-//                )
     }
 }

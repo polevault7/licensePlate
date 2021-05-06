@@ -1,6 +1,5 @@
 package com.example.number.model;
 
-import lombok.Data;
 import lombok.Value;
 
 @Value

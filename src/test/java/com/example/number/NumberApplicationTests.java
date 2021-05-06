@@ -15,21 +15,59 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class NumberApplicationTests {
     @Autowired
     MockMvc mockMvc;
-
+    @Test
     void crudTest() throws Exception {
         mockMvc.perform(get("/numbers/1"))
                 .andExpect(
                         content()
                                 .json("{\n" +
-                                        "    \"id\": 2,\n" +
-                                        "    \"aircraftId\": 2,\n" +
-                                        "    \"sourceCity\": \"KAZAN\",\n" +
-                                        "    \"destCity\": \"MOSCOW\",\n" +
-                                        "    \"departureTime\": 1608163200000,\n" +
-                                        "    \"arrivalTime\": 1500000,\n" +
-                                        "    \"journeyDuration\": 10000,\n" +
-                                        "    \"price\": 5000\n" +
-                                        "  }")
+                                        "  \"id\": 1,\n" +
+                                        "  \"firstLetter\": \"А\",\n" +
+                                        "  \"number\": \"001\",\n" +
+                                        "  \"secondLetter\": \"А\",\n" +
+                                        "  \"thirdLetter\": \"А\"\n" +
+                                        "}")
                 );
+
+        mockMvc.perform(get("/numbers/"))
+                .andExpect(
+                        content()
+                                .json("[\n" +
+                                        "  {\n" +
+                                        "    \"id\": 1,\n" +
+                                        "    \"firstLetter\": \"А\",\n" +
+                                        "    \"number\": \"001\",\n" +
+                                        "    \"secondLetter\": \"А\",\n" +
+                                        "    \"thirdLetter\": \"А\"\n" +
+                                        "  },\n" +
+                                        "  {\n" +
+                                        "    \"id\": 2,\n" +
+                                        "    \"firstLetter\": \"А\",\n" +
+                                        "    \"number\": \"002\",\n" +
+                                        "    \"secondLetter\": \"А\",\n" +
+                                        "    \"thirdLetter\": \"А\"\n" +
+                                        "  },\n" +
+                                        "  {\n" +
+                                        "    \"id\": 3,\n" +
+                                        "    \"firstLetter\": \"А\",\n" +
+                                        "    \"number\": \"113\",\n" +
+                                        "    \"secondLetter\": \"А\",\n" +
+                                        "    \"thirdLetter\": \"А\"\n" +
+                                        "  }\n" +
+                                        "]")
+                );
+
+        mockMvc.perform(get("/numbers/generateNext/"))
+                .andExpect(
+                        content()
+                                .string("А114АА 116 RUS")
+                );
+
+        mockMvc.perform(get("/numbers/generateNext/"))
+                .andExpect(
+                        content()
+                                .string("А115АА 116 RUS")
+                );
+
     }
 }

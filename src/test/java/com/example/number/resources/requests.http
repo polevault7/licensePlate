@@ -6,7 +6,7 @@ GET http://localhost:8080/numbers/A001AB
 
 ###
 
-GET http://localhost:8080/numbers/0
+GET http://localhost:8080/numbers/1
 
 ###
 
@@ -33,26 +33,22 @@ GET http://localhost:8080/numbers/generateRandom/
 
 GET http://localhost:8080/numbers/generateNext/
 
-###
-
-GET project-platenumber.herokuapp.com/numbers
 
 ###
 
-GET project-platenumber.herokuapp.com/numbers/generateNext/
+GET project-license-number.herokuapp.com/numbers/
 
 ###
 
-GET project-platenumber.herokuapp.com/numbers/generateNext/
+GET project-license-number.herokuapp.com/numbers/1
 
 ###
 
-GET project-platenumber.herokuapp.com/numbers/generateRandom/
-
+GET project-license-number.herokuapp.com/numbers/generateRandom/
 
 ###
 
-GET project-platenumber.herokuapp.com/numbers/1/
+GET project-license-number.herokuapp.com/numbers/generateNext/
 
 
 
