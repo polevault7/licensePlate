@@ -35,11 +35,24 @@ GET http://localhost:8080/numbers/generateNext/
 
 ###
 
-
-
-
 GET project-platenumber.herokuapp.com/numbers
 
+###
+
+GET project-platenumber.herokuapp.com/numbers/generateNext/
+
+###
+
+GET project-platenumber.herokuapp.com/numbers/generateNext/
+
+###
+
+GET project-platenumber.herokuapp.com/numbers/generateRandom/
+
+
+###
+
+GET project-platenumber.herokuapp.com/numbers/1/
 
 
 
