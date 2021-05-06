@@ -1,8 +1,9 @@
 package com.example.number.repository;
 
-import com.example.platenumber.converter.PlateNumberConverter;
-import com.example.platenumber.mapper.PlateRowMapper;
-import com.example.platenumber.model.PlateNumber;
+
+import com.example.number.converter.PlateNumberConverter;
+import com.example.number.mapper.PlateRowMapper;
+import com.example.number.model.PlateNumber;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;

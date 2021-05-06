@@ -1,7 +1,8 @@
 package com.example.number.mapper;
 
-import com.example.platenumber.converter.PlateNumberConverter;
-import com.example.platenumber.model.PlateNumber;
+
+import com.example.number.converter.PlateNumberConverter;
+import com.example.number.model.PlateNumber;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
 

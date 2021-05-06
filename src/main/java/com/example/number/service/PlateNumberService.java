@@ -1,11 +1,11 @@
-package com.example.platenumber.service;
+package com.example.number.service;
 
-import com.example.platenumber.model.PlateNumber;
-import com.example.platenumber.repository.PlateNumberRepository;
+
+import com.example.number.model.PlateNumber;
+import com.example.number.repository.PlateNumberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;

@@ -1,6 +1,7 @@
 package com.example.number.converter;
 
-import com.example.platenumber.model.PlateNumber;
+
+import com.example.number.model.PlateNumber;
 
 public class PlateNumberConverter {
 
