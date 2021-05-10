@@ -2,10 +2,6 @@ GET http://localhost:8080/numbers
 
 ###
 
-GET http://localhost:8080/numbers/A001AB
-
-###
-
 GET http://localhost:8080/numbers/1
 
 ###
@@ -23,21 +19,28 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8080/numbers/generate/
-
-###
-
 GET http://localhost:8080/numbers/generateRandom/
 
 ###
 
 GET http://localhost:8080/numbers/generateNext/
 
-
 ###
 
 GET project-license-number.herokuapp.com/numbers/
 
+###
+
+POST project-license-number.herokuapp.com/numbers/
+Content-Type: application/json
+
+{
+  "id": 0,
+  "firstLetter": "А",
+  "number": 500,
+  "secondLetter": "У",
+  "thirdLetter": "В"
+}
 ###
 
 GET project-license-number.herokuapp.com/numbers/1

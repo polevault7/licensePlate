@@ -19,6 +19,7 @@ public class PlateNumberService {
             .of('А', 'Е', 'Т', 'О', 'Р', 'Н', 'У', 'К', 'Х', 'С', 'В', 'М')
             .sorted()
             .collect(Collectors.toList());
+    private  PlateNumber last;
 
 
     public PlateNumber getRandom() {
@@ -65,7 +66,7 @@ public class PlateNumberService {
     }
 
     public PlateNumber getNext() {
-        PlateNumber last = repository.getLast();
+        last = repository.getLast();
         int number = Integer.parseInt(last.getNumber());
         if (number == 999) {
             if (alphabet.indexOf(last.getThirdLetter()) == alphabet.size() - 1) {
@@ -73,30 +74,16 @@ public class PlateNumberService {
                     if (alphabet.indexOf(last.getFirstLetter()) == alphabet.size() - 1) {
                         throw new RuntimeException();
                     }
-                    return repository.save(new PlateNumber(
-                            last.getId(),
-                            alphabet.get(alphabet.indexOf(last.getFirstLetter()) + 1),
-                            last.getNumber(),
-                            last.getSecondLetter(),
-                            last.getThirdLetter()
-                    ));
+                    return save();
                 }
-                return repository.save(new PlateNumber(
-                        last.getId(),
-                        last.getFirstLetter(),
-                        last.getNumber(),
-                        alphabet.get(alphabet.indexOf(last.getSecondLetter()) + 1),
-                        last.getThirdLetter()
-                ));
+                return save();
             }
-            return repository.save(new PlateNumber(
-                    last.getId(),
-                    last.getFirstLetter(),
-                    last.getNumber(),
-                    last.getSecondLetter(),
-                    alphabet.get(alphabet.indexOf(last.getThirdLetter()) + 1)
-            ));
+            return save();
         }
+        return save();
+    }
+
+    public PlateNumber save() {
         return repository.save(new PlateNumber(
                 last.getId(),
                 last.getFirstLetter(),
